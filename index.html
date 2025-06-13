@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentoria Cybersecurity Elite - Transforme sua Carreira em Segurança Digital</title>
+  <meta name="description"
+    content="Mentoria personalizada 1:1 em Cybersecurity. Aprenda Ethical Hacking, Automação e Compliance com especialista. Apenas 5 vagas disponíveis.">
+  <meta name="keywords"
+    content="mentoria cybersecurity, ethical hacking, segurança digital, automação hacker, compliance, GRC, portfolio cybersecurity">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="matrix-bg">
+    <canvas id="matrix"></canvas>
+  </div>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo" aria-label="CHDEVSEC - Mentoria Cybersecurity">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        CHDEVSEC
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#mentoria">Mentoria</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <!-- ADICIONE ESTA LINHA -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ADICIONE ESTA DIV APÓS O HEADER -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <section class="hero" id="mentoria">
+    <div class="container">
+      <div class="hero-content">
+        <div class="urgency-badge">
+          <i class="fas fa-fire"></i> VAGAS LIMITADAS - APENAS 5 SPOTS DISPONÍVEIS
+        </div>
+
+        <h1>Mentoria Cybersecurity Elite</h1>
+        <p class="hero-subtitle">
+          Transforme sua carreira em segurança com acompanhamento personalizado 1:1.
+          Descubra os caminhos do Ethical Hacking, automação e compliance na prática.
+          Seja guiado até se tornar um dos poucos profissionais elite do mercado.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">semanas de mentoria intensiva</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1:1</span>
+            <span class="stat-label">acompanhamento individual</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2 projetos</span>
+            <span class="stat-label">reais para portfolio</span>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="#preco" class="btn-primary">
+            <i class="fas fa-calendar-alt"></i>
+            Garantir Minha Vaga Agora
+          </a>
+          <a href="#estrutura" class="btn-secondary">
+            <i class="fas fa-list-ul"></i>
+            Ver Estrutura da Mentoria
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="estrutura">
+    <div class="container">
+      <h2 class="section-title">Estrutura Completa da Mentoria</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="feature-title">Ethical Hacking</h3>
+          <p class="feature-description">
+            Domine os fundamentos de hacking ético com foco em prática. Explore vulnerabilidades reais, pense como um
+            atacante e defenda com mais inteligência. Seja guiado pelos caminhos da segurança ofensiva.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="feature-title">Automação Hacker</h3>
+          <p class="feature-description">
+            Aprenda a automatizar tarefas de pentest, coleta e defesa com Python, Bash e YAML. Crie soluções que
+            economizam tempo e entregam resultado. Descubra como caminhar pela automação inteligente.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="feature-title">Segurança Defensiva</h3>
+          <p class="feature-description">
+            Implemente defesas eficazes, aplique frameworks de compliance e fortaleça sua infraestrutura contra ameaças
+            reais. Aprenda a gerenciar vulnerabilidades, automatizar boas práticas e criar relatórios executivos
+            alinhados à governança de segurança.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="feature-title">Projetos Reais</h3>
+          <p class="feature-description">
+            Construa 2 projetos completos para seu portfólio: sistema de automação e dashboard de vulnerabilidades.
+            Projetos que chamam atenção de recrutadores e demonstram suas habilidades práticas.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3 class="feature-title">Direcionamento de Carreira</h3>
+          <p class="feature-description">
+            Receba orientação personalizada sobre os caminhos da carreira em cybersecurity. Descubra onde você quer
+            chegar e seja guiado passo a passo para alcançar seus objetivos profissionais.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="feature-title">Portfolio Profissional</h3>
+          <p class="feature-description">
+            Aprenda a criar um portfólio que destaca suas habilidades, com os projetos desenvolvidos na mentoria.
+            Seja orientado para se destacar da concorrência e impressionar recrutadores.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="preco">
+    <div class="container">
+      <div class="pricing-content">
+        <h2 class="section-title">Investimento na Sua Transformação</h2>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="limited-spots">
+              <i class="fas fa-fire"></i> APENAS 5 VAGAS DISPONÍVEIS
+            </div>
+            <h3>Mentoria Cybersecurity Elite</h3>
+          </div>
+
+          <div class="pricing-body">
+            <div class="price-section">
+              <div class="price-main">
+                <span class="currency">R$</span>
+                <span class="amount">397</span>
+                <span class="cents">,00</span>
+              </div>
+              <div class="price-installments">ou 12x de R$ 24,75</div>
+            </div>
+
+            <div class="guarantee-badge">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <strong>Garantia Total de 7 dias</strong>
+                <p>Se não ficar satisfeito, devolvemos 100% do seu dinheiro</p>
+              </div>
+            </div>
+
+            <ul class="benefits-list">
+              <li>6 semanas de mentoria 1:1 personalizada</li>
+              <li>Material de apoio exclusivo e atualizado</li>
+              <li>Aulas gravadas para revisão</li>
+              <li>Suporte direto via WhatsApp</li>
+              <li>2 projetos completos para portfolio</li>
+              <li>Scripts e automações prontas</li>
+              <li>Certificado de conclusão</li>
+              <li>Criação de Portfolio Profissional</li>
+              <li>Direcionamento de carreira personalizado</li>
+            </ul>
+
+            <a href="#" class="btn-cta">
+              <i class="fas fa-rocket"></i>
+              GARANTIR MINHA VAGA AGORA
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-content">
+        <div class="profile-section">
+          <div class="profile-image">
+            <!-- SUBSTITUA ESTA LINHA: -->
+            <!-- <i class="fas fa-user-ninja"></i> -->
+
+            <!-- POR ESTA: -->
+            <img src="Mockups/eu2.png" alt="Caio Henrique" class="profile-photo">
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>Caio Henrique</h2>
+          <p>
+            <strong>Especialista em Cybersecurity</strong> com mais de 6 anos de experiência em ambientes corporativos
+            críticos, atuando em DevSecOps, Compliance, automações avançadas e resposta a incidentes.
+          </p>
+          <p>
+            Desenvolveu soluções que protegeram milhões em ativos digitais, criou sistemas de automação que reduziram
+            riscos em 80% e orientou dezenas de profissionais que hoje ocupam cargos em Infraestrutura e Cybersecurity.
+          </p>
+          <p>
+            <strong>Missão:</strong> Guiar profissionais pelos caminhos da cybersecurity de elite. "Sem enrolação, sem
+            papo furado -
+            direto ao ponto. Vou te mostrar os caminhos, te guiar por eles e te ensinar a caminhar com segurança."
+          </p>
+          <div class="credentials">
+            <div class="credential-item">
+              <i class="fas fa-certificate" aria-hidden="true"></i>
+              <span>6+ anos em Cybersecurity</span>
+            </div>
+            <div class="credential-item">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <span>20+ profissionais orientados</span>
+            </div>
+            <div class="credential-item">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <span>Milhões em ativos protegidos</span>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona a mentoria individual? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          São 6 semanas de acompanhamento 1:1 com 2 sessões semanais de 1h30, suporte via WhatsApp 24/7, revisão de
+          projetos em tempo real e desenvolvimento de um plano de carreira personalizado para seu perfil.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Se eu quiser focar só em Ethical Hacking, vou precisar aprender segurança defensiva também? <i
+            class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          A mentoria é personalizada conforme seu objetivo. Se o foco for Ethical Hacking, vamos aprofundar nisso em até
+          6 semanas. Porém, alguns fundamentos de segurança defensiva serão importantes para entender melhor ataques e
+          defesas reais. O mesmo vale para quem quer focar só em defesa: conhecer a lógica ofensiva ajuda muito na
+          proteção.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Recebo certificado ao final? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Sim! Você receberá um certificado de conclusão com todas as áreas abordadas na sua trilha personalizada.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso ter experiência prévia em segurança? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Não! A mentoria é 100% adaptada ao seu nível. Começamos do básico e evoluímos no seu ritmo. Se você já tem
+          experiência em TI, aceleramos o processo. Se é iniciante, construímos uma base sólida.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Vou aprender a criar portfólio e me preparar para o mercado? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Com certeza. Um dos pilares da mentoria é te ajudar a construir projetos reais, se posicionar no mercado e
+          montar um portfólio forte.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Quais são os pré-requisitos técnicos para a mentoria? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Nenhum pré-requisito técnico formal é necessário. O importante é ter vontade de aprender e dedicação. Todo o
+          conhecimento necessário será construído durante a mentoria.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como é o suporte pós-mentoria? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Após as 6 semanas, você poderá continuar evoluindo com acesso vitalício aos conteúdos atualizados e participar
+          de uma comunidade exclusiva com outros mentorados. Estarei presente nesse grupo para trocar ideias, responder
+          dúvidas pontuais e compartilhar insights do mercado — sem suporte individual, mas com espaço direto para
+          conexão e crescimento contínuo.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso parcelar o valor da mentoria? <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Sim, o valor pode ser parcelado em até 12x no cartão de crédito. Oferecemos flexibilidade para que você possa
+          investir na sua carreira sem preocupações.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 CHDEVSEC. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
