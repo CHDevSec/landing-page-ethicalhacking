@@ -855,41 +855,37 @@ nav {
 
 .faq-item {
   background: linear-gradient(135deg, rgba(220, 20, 60, 0.05), rgba(10, 26, 46, 0.1));
-  margin-bottom: 1.5rem;
   border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
   border: 1px solid rgba(220, 20, 60, 0.2);
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  border-color: rgba(220, 20, 60, 0.4);
+  border-color: #dc143c;
+  box-shadow: 0 5px 20px rgba(220, 20, 60, 0.2);
 }
 
 .faq-question {
-  padding: 2rem;
-  background: transparent;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 700;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
-.faq-question:hover {
-  color: #dc143c;
+.faq-question h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .faq-question i {
-  transition: transform 0.3s ease;
   color: #dc143c;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
 .faq-item.active .faq-question i {
@@ -897,31 +893,549 @@ nav {
 }
 
 .faq-answer {
-  padding: 0 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  color: #ccc;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  transition: max-height 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
-  padding: 0 2rem 2rem;
   max-height: 200px;
+}
+
+.faq-answer p {
+  padding: 0 2rem 1.5rem;
+  color: #ccc;
+  line-height: 1.7;
 }
 
 /* Footer */
 footer {
-  background: #0a0a0a;
-  padding: 2rem 0;
-  text-align: center;
-  border-top: 1px solid rgba(220, 20, 60, 0.3);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 100%);
+  padding: 60px 0 20px;
+  border-top: 2px solid rgba(220, 20, 60, 0.3);
 }
 
-footer p {
-  color: #666;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h4 {
+  color: #dc143c;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #dc143c;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #dc143c;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.contact-info i {
+  color: #dc143c;
+  width: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+}
+
+/* Ebook Section Styles */
+.ebook-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a1a2e 0%, #1a0a1a 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.ebook-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ebook-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ebook-badge-large {
+  display: inline-block;
+  background: linear-gradient(45deg, #4ecdc4, #36a39c);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.ebook-intro {
+  font-size: 1.3rem;
+  color: #b0b0b0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.ebook-preview {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.ebook-cover {
+  display: flex;
+  justify-content: center;
+}
+
+.ebook-mockup {
+  width: 250px;
+  height: 350px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+.ebook-mockup i {
+  font-size: 3rem;
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+
+.ebook-mockup h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.ebook-mockup p {
   font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+.ebook-details h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.ebook-chapters {
+  margin-bottom: 3rem;
+}
+
+.chapter-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(78, 205, 196, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(78, 205, 196, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chapter-item:hover {
+  background: rgba(78, 205, 196, 0.1);
+  border-color: rgba(78, 205, 196, 0.3);
+  transform: translateY(-2px);
+}
+
+.chapter-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4ecdc4, #36a39c);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chapter-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.chapter-content h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.chapter-content p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.ebook-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(220, 20, 60, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(220, 20, 60, 0.1);
+}
+
+.stat-item .stat-number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #4ecdc4;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item .stat-label {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ebook-benefits {
+  margin-bottom: 4rem;
+}
+
+.ebook-benefits h3 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.05), rgba(10, 26, 46, 0.1));
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: #4ecdc4;
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.2);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #4ecdc4, #36a39c);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.ebook-download {
+  margin-bottom: 4rem;
+}
+
+.ebook-testimonial {
+  background: linear-gradient(135deg, rgba(220, 20, 60, 0.05), rgba(10, 26, 46, 0.1));
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(220, 20, 60, 0.2);
+  text-align: center;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.3rem;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-content blockquote::before {
+  content: '"';
+  font-size: 3rem;
+  color: #dc143c;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+}
+
+.testimonial-author {
+  color: #4ecdc4;
+  font-weight: 600;
+}
+
+/* Ebook CTA Section */
+.ebook-cta-section {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(78, 205, 196, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+.ebook-teaser {
+  margin-bottom: 1.5rem;
+}
+
+.ebook-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, #4ecdc4, #36a39c);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ebook-question {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.btn-ebook {
+  background: linear-gradient(135deg, #4ecdc4, #36a39c);
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.btn-ebook:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+  border-color: #fff;
+}
+
+.ebook-subtitle {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Ebook Download Section - Adjustments for better responsiveness and icon styling */
+.ebook-download .download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), rgba(10, 26, 46, 0.2));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(220, 20, 60, 0.3);
+}
+
+.ebook-download .download-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #dc143c, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ebook-download .download-card p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.ebook-download .btn-download {
+  background: linear-gradient(135deg, #4ecdc4, #36a39c);
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(78, 205, 196, 0.4);
+  display: inline-flex; /* Use flex to align icon and text */
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.ebook-download .btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.6);
+  border-color: #fff;
+}
+
+.ebook-download .download-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.ebook-download .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+  flex: 1 1 auto; /* Allow items to grow and shrink */
+  min-width: 150px; /* Minimum width for items before wrapping */
+}
+
+.ebook-download .info-item i {
+  font-size: 2.5rem; /* Larger icons */
+  color: #4ecdc4; /* Icon color */
+  margin-bottom: 0.5rem;
+}
+
+.ebook-download .info-item span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments for ebook download section */
+@media (max-width: 768px) {
+  .ebook-download .download-card {
+    padding: 1.5rem;
+  }
+
+  .ebook-download .download-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .ebook-download .download-card p {
+    font-size: 1rem;
+  }
+
+  .ebook-download .btn-download {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .ebook-download .info-item {
+    min-width: 120px;
+  }
+
+  .ebook-download .info-item i {
+    font-size: 2rem;
+  }
+
+  .ebook-download .info-item span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ebook-download .download-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ebook-download .info-item {
+    min-width: unset;
+  }
 }
 
 /* Responsive Design */
@@ -949,33 +1463,35 @@ footer p {
     gap: 2rem;
   }
 
+  .feature-card {
+    padding: 2rem;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
   }
 
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    font-size: 4rem;
+  .ebook-preview {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
   }
 
-  .nav-links {
+  .ebook-stats {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .nav-links a {
-    padding: 8px 16px;
-    font-size: 1rem;
+  .benefits-grid {
+    grid-template-columns: 1fr;
   }
 
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .pricing-card {
-    margin: 0 1rem;
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
   }
 }
 
@@ -992,24 +1508,35 @@ footer p {
     font-size: 2rem;
   }
 
-  .hero-subtitle {
-    font-size: 1.1rem;
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-cta {
+    padding: 15px 30px;
+    font-size: 1rem;
   }
 
   .feature-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
-  .pricing-header h3 {
-    font-size: 1.5rem;
+  .pricing-card {
+    margin: 0 10px;
   }
 
-  .amount {
-    font-size: 3rem;
+  .ebook-mockup {
+    width: 200px;
+    height: 280px;
+    padding: 1.5rem;
   }
 
-  .nav-links {
+  .chapter-item {
     flex-direction: column;
-    gap: 0.5rem;
+    text-align: center;
+    gap: 1rem;
   }
 }
+
