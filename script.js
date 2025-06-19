@@ -239,3 +239,75 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', createMobileMenu);
 });
 
+
+// Função para download do e-book
+function downloadEbook() {
+    // Simula o download do e-book
+    const link = document.createElement('a');
+    link.href = 'EthicalHackingnaPrática–GuiaCompletoParaIniciantesemCybersecurity.pdf';
+    link.download = 'Manual-Ethical-Hacking-Pratica-CHDEVSEC.pdf';
+    link.click();
+    
+    // Feedback visual para o usuário
+    const btn = event.target.closest('.btn-download');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> Download Iniciado!';
+    btn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+    
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = 'linear-gradient(135deg, #4ecdc4, #44a08d)';
+    }, 3000);
+}
+
+// Adicionar smooth scroll para o botão do e-book
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll para botão do e-book na hero section
+    const ebookBtn = document.querySelector('.btn-ebook');
+    if (ebookBtn) {
+        ebookBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#ebook-section');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+    
+    // Animação de entrada para elementos da seção do e-book
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const ebookObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos da seção do e-book
+    document.querySelectorAll('.chapter-item, .benefit-card, .download-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease-out';
+        ebookObserver.observe(el);
+    });
+    
+    // Adicionar delay escalonado para chapter-items
+    document.querySelectorAll('.chapter-item').forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+    });
+    
+    // Adicionar delay escalonado para benefit-cards
+    document.querySelectorAll('.benefit-card').forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+    });
+});
+
